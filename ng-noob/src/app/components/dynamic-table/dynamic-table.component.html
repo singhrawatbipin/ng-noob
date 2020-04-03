@@ -1,0 +1,30 @@
+<section class="table">
+    <div class="rnd-corner">
+        <div class="container">
+            <table class="custab text-center table-responsive">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Street</th>
+                        <th>City</th>
+                        <th>Latitude</th>
+                        <th>Website</th>
+                        <th>Company Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let data of tableData'>
+                        <td>{{data.id}}</td>
+                        <td>{{data.name}}</td>
+                        <td>{{data.address.street}}</td>
+                        <td>{{data.address.city}}</td>
+                        <td>{{data.address.geo.lat}}</td>
+                        <td>{{data.website}}</td>
+                        <td>{{data.company.name}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
