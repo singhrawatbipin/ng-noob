@@ -9,12 +9,14 @@ import { DynamicTableComponent } from './components/dynamic-table/dynamic-table.
 import { DynamicTableService } from './services/dynamic-table.service';
 import { EventListingComponent } from './components/event-listing/event-listing.component';
 import { EventListingService } from './services/event-listing.service';
+import { InfiniteScrollComponent } from './components/infinite-scroll/infinite-scroll.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DynamicTableComponent,
     EventListingComponent,
+    InfiniteScrollComponent,
   ],
   imports: [
     BrowserModule,
