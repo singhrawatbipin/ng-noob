@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { EventListingService } from 'src/app/services/event-listing.service';
 import { NgForm } from '@angular/forms';
 import { EventListing } from 'src/app/models/event-listing.model';
@@ -9,6 +9,8 @@ import { EventListing } from 'src/app/models/event-listing.model';
   styleUrls: ['./event-listing.component.scss']
 })
 export class EventListingComponent implements OnInit {
+
+  @ViewChild('eventForm') public eventListingForm: NgForm;
 
   constructor(private service: EventListingService) { }
 
@@ -26,7 +28,7 @@ export class EventListingComponent implements OnInit {
 
   insertData(eventForm: NgForm) {
     this.service.postEvent(eventForm.value).subscribe(res => {
-    this.resetForm(eventForm);
+      this.resetForm(eventForm);
     });
   }
 

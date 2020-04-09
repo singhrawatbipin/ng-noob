@@ -24,7 +24,7 @@
                                 <label for="longDes">Long Description</label>
                                 <textarea class="form-control" id="longDes" rows="4"
                                     placeholder="Describe yourself here..." name="longDes"
-                                    [(ngModel)]="service.eventsData.longDes" #longDes='ngModel' required > </textarea>
+                                    [(ngModel)]="service.eventsData.longDes" #longDes='ngModel' required> </textarea>
                             </div>
                             <span *ngIf="longDes.invalid && (longDes.dirty || longDes.touched)">
                                 Description is required...
@@ -48,7 +48,7 @@
                                 <label for="venueName">Venue Name</label>
                                 <input type="text" id="venueName" class="form-control"
                                     placeholder="Enter the name of venue..." name="venueName"
-                                    [(ngModel)]="service.eventsData.venueName"  #venueName='ngModel' required>
+                                    [(ngModel)]="service.eventsData.venueName" #venueName='ngModel' required>
                             </div>
                             <span *ngIf="venueName.invalid && (venueName.dirty || venueName.touched)">
                                 Venue name is required...
@@ -59,7 +59,8 @@
                                 <label for="mobNumber">Mobile Number</label>
                                 <input type="text" id="mobNumber" class="form-control"
                                     placeholder="Enter your mobile number..." name="mobNumber"
-                                    [(ngModel)]="service.eventsData.mobNumber" pattern="^\d{10}$" #mobNumber='ngModel' required>
+                                    [(ngModel)]="service.eventsData.mobNumber" pattern="^\d{10}$" #mobNumber='ngModel'
+                                    required>
                             </div>
                             <span *ngIf="mobNumber?.errors?.required && (mobNumber.dirty || mobNumber.touched)">
                                 Mobile number is required...
@@ -73,8 +74,7 @@
                                 <label for="pincode">Pincode</label>
                                 <input type="text" class="form-control" id="pincode" name="pincode"
                                     placeholder="Enter the pincode of venue..." [(ngModel)]="service.eventsData.pincode"
-                                    #pincode='ngModel'
-                                    pattern="^\d{6}$" required>
+                                    #pincode='ngModel' pattern="^\d{6}$" required>
                             </div>
                             <span *ngIf="pincode?.errors?.required && (pincode.dirty || pincode.touched)">
                                 Pincode is required...
@@ -88,17 +88,16 @@
                             <div class="form-group">
                                 <label for="address">Address</label>
                                 <input type="text" class="form-control" id="address" name="address"
-                                    placeholder="Enter the address of venue..."
-                                    [(ngModel)]="service.eventsData.address"
-                                    #address='ngModel'
-                                    required>
+                                    placeholder="Enter the address of venue..." [(ngModel)]="service.eventsData.address"
+                                    #address='ngModel' required>
                             </div>
                             <span *ngIf="address.invalid && (address.dirty || address.touched)">
                                 Address is required...
                             </span>
                         </div>
                         <div class="text-center">
-                            <button type="submit" (click)="refreshEvents()" class="button" style="vertical-align:middle">Submit</button>
+                            <button type="submit" (click)="refreshEvents()" class="button"
+                                style="vertical-align:middle">Submit</button>
                         </div>
                     </div>
                 </form>

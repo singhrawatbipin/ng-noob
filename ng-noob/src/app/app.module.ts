@@ -10,6 +10,7 @@ import { DynamicTableService } from './services/dynamic-table.service';
 import { EventListingComponent } from './components/event-listing/event-listing.component';
 import { EventListingService } from './services/event-listing.service';
 import { InfiniteScrollComponent } from './components/infinite-scroll/infinite-scroll.component';
+import { EventListingCanDeactivateGuardService } from './components/event-listing/event-listing-deactivate.gurad';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { InfiniteScrollComponent } from './components/infinite-scroll/infinite-s
     HttpClientModule,
     FormsModule
   ],
-  providers: [DynamicTableService, EventListingService], // provide the service here to use it globally //
+  providers: [DynamicTableService, EventListingService, EventListingCanDeactivateGuardService], // provide the service here to use it globally //
   bootstrap: [AppComponent]
 })
 export class AppModule { }
